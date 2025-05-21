@@ -1,0 +1,26 @@
+{
+    "name": "Linguagem Potigol",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "java.home": "/usr/lib/jvm/java-8-openjdk-amd64",
+                "potigol.path": "${workspaceFolder}/lib/potigol.jar",
+                "[potigol]": {
+                    "editor.tabSize": 2,
+                    "editor.insertSpaces": true,
+                    "editor.detectIndentation": false
+                },
+                "files.associations": {
+                    "*.poti": "potigol"
+                }
+            },
+            "extensions": [
+//                "vscjava.vscode-java-pack",
+                "Potigol.potigol-language"
+            ]
+        }
+    }
+}
