@@ -7,5 +7,5 @@ FROM eclipse-temurin:8-jdk
 #    && rm -rf /var/lib/apt/lists/*
 
 # Cria diretório e baixa o potigol.jar
-RUN mkdir -p /workspace/lib \
-    && wget https://github.com/potigol/potigol/releases/download/1.0.0-RC1/potigol.jar -O /workspace/lib/potigol.jar
+RUN mkdir -p /workspaces/lib \
+    && wget https://github.com/potigol/potigol/releases/download/1.0.0-RC1/potigol.jar -O /workspaces/lib/potigol.jar
