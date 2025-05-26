@@ -4,9 +4,9 @@
         {
             "label": "Executar Potigol",
             "type": "shell",
-            "command": "java -jar ${workspaceFolder}/lib/potigol.jar ${file}",
+            "command": "${workspaceFolder}/potigol ${file}",
             "group": {
-                "kind": "build",
+                "kind": "none",
                 "isDefault": true
             },
             "problemMatcher": []

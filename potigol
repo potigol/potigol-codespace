@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar /workspaces/lib/potigol.jar -c -w "$1"
