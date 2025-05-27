@@ -3,4 +3,4 @@ IDE Potigol para o CodeSpace
 
 ## Execução
 
-Para executar: ctrl+F5
+Para executar digite: `potigol arquivo.poti`

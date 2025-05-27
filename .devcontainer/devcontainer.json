@@ -16,12 +16,14 @@
 				},
 				"files.associations": {
 					"*.poti": "potigol"
-				}
+				},
+				"workbench.colorTheme": "Monokai"
 			},
 			"extensions": [
 				"vscjava.vscode-java-pack",
 				"Potigol.potigol-language",
-				"designliquido.designliquido-vscode"
+				"designliquido.designliquido-vscode",
+				"potigol.potigol-language"
 			]
 		}
 	},
