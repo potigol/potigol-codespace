@@ -5,8 +5,9 @@
             "name": "Executar Potigol",
             "type": "java",
             "request": "launch",
-            "mainClass": "potigol.Principal",
-            "args": "${file}",
+            "classPaths": ["/usr/local/lib/potigol.jar"],            
+            "mainClass": "br.edu.ifrn.potigol.Principal",
+            "args": "-c -w ${file}",
         }
     ]
 }
