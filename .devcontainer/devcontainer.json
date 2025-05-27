@@ -4,29 +4,27 @@
 	"name": "Linguagem Potigol",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/java:1-11-bookworm",
-	"postCreateCommand": "sudo ./config.sh",
-
-	    "customizations": {
-        "vscode": {
-            "settings": {
-                "potigol.path": "/usr/local/lib/potigol.jar",
-                "[potigol]": {
-                    "editor.tabSize": 2,
-                    "editor.insertSpaces": true,
-                    "editor.detectIndentation": false
-                },
-                "files.associations": {
-                    "*.poti": "potigol"
-                }
-            },
-            "extensions": [
+	"postCreateCommand": "postCreateCommand": "sudo sh -c '(echo \"#!/usr/bin/env sh\" && curl -L https://github.com/potigol/potigol/releases/download/1.0.0-RC1/potigol.jar) > /usr/local/lib/potigol.jar && echo \"#!/bin/bash\\n\\njava -jar /usr/local/lib/potigol.jar \\$* 2> /dev/null\" | sudo tee /usr/local/bin/potigol && sudo chmod +x /usr/local/bin/potigol'",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"potigol.path": "/usr/local/lib/potigol.jar",
+				"[potigol]": {
+					"editor.tabSize": 2,
+					"editor.insertSpaces": true,
+					"editor.detectIndentation": false
+				},
+				"files.associations": {
+					"*.poti": "potigol"
+				}
+			},
+			"extensions": [
 				"vscjava.vscode-java-pack",
 				"Potigol.potigol-language",
 				"designliquido.designliquido-vscode"
 			]
-        }
-    },
-
+		}
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
@@ -35,14 +33,10 @@
 		},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	}
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
-	
-
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
