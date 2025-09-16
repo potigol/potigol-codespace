@@ -17,7 +17,7 @@
 				"files.associations": {
 					"*.poti": "potigol"
 				},
-				"workbench.colorTheme": "Dark Modern"
+				"workbench.colorTheme": "Default Dark Modern"
 			},
 			"extensions": [
 				"vscjava.vscode-java-pack",
