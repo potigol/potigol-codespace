@@ -4,7 +4,7 @@
 	"name": "Linguagem Potigol",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
-	"postCreateCommand": "sudo sh -c '(echo \"#!/usr/bin/env sh\" && curl -L https://github.com/potigol/potigol/releases/download/1.0.0-RC2/potigol.jar) > /usr/local/lib/potigol.jar && echo \"#!/bin/bash\\n\\njava -jar /usr/local/lib/potigol.jar \\$* 2> /dev/null\" | sudo tee /usr/local/bin/potigol && sudo chmod +x /usr/local/bin/potigol'",
+	"postCreateCommand": "sudo sh -c '(echo \"#!/usr/bin/env sh\" && curl -L https://github.com/potigol/potigol/releases/download/1.0.0-RC2/potigol.jar) > /usr/local/lib/potigol.jar && echo \"#!/bin/bash\\n\\njava -jar /usr/local/lib/potigol.jar -c -w \\$* \" | sudo tee /usr/local/bin/potigol && sudo chmod +x /usr/local/bin/potigol'",
 	"customizations": {
 		"vscode": {
 			"settings": {
